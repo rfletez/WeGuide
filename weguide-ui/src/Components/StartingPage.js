@@ -15,32 +15,34 @@ function StartingPage() {
             <div style={{
                 backgroundColor: 'white',
                 height: '135px',
-                width: '400px',
+                justifyContent: 'center',
                 display: 'block',
                 border: '5px red solid',
                 paddingTop: '10px',
-                marginLeft: '370px'
+                marginLeft: '370px',
+                marginRight: '390px'
             }}>
                 <div className='' style={{
-                    textAlign: 'center',
+
                     marginBottom: '30px'
                 }}>
                     <button
                         className='btn btn-secondary'
-                        style={{ marginRight: '15px' }}
+                        style={{}}
                         onClick={() => navigate('/coachSignup')}
                     >Login as Coach</button>
 
                     <button
                         className='btn btn-info'
+                        style={{ marginLeft: '50px' }}
                         onClick={() => navigate('/registerCoach')}
                     >Register as Coach</button>
                 </div>
 
-                <div className='' style={{ textAlign: 'center' }}>
+                <div className='' style={{}}>
                     <button
                         className='btn btn-secondary'
-                        style={{ marginRight: '15px' }}
+                        style={{ marginRight: '70px' }}
                         onClick={() => navigate('/userSignup')}
                     >Login as User</button>
 
