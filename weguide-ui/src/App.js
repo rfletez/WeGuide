@@ -3,19 +3,24 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import StartingPage from './Components/StartingPage';
 import UserProfile from './Components/UserProfile';
 
-import RegisterCoach from './Components/Register/RegisterCoach';
+import CoachRegistration from './Components/Register/CoachRegistration';
+import UserRegistration from './Components/Register/UserRegistration';
+import CoachSignup from './Components/Login/CoachSignup';
+import UserSignup from './Components/Login/UserSignup';
 
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<StartingPage />} />
-        <Route index element={<StartingPage />} />
-        <Route exact path='user_profile' element={<UserProfile />} />
+        <Route exact path='/' element={<StartingPage />} />
 
-        <Route path='registerCoach' element={<RegisterCoach />} />
+        <Route path='user_profile' element={<UserProfile />} />
 
+        <Route path='registerCoach' element={<CoachRegistration />} />
+        <Route path='registerUser' element={<UserRegistration />} />
+        <Route path='coachSignup' element={<CoachSignup />} />
+        <Route path='userSignup' element={<UserSignup />} />
       </Routes>
     </BrowserRouter>
   );
