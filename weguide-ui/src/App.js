@@ -3,25 +3,19 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import StartingPage from './Components/StartingPage';
 import UserProfile from './Components/UserProfile';
 
-import coachLogin from './Components/Login/coachLogin';
-import userLogin from './Components/Login/userLogin';
-import registerCoach from './Components/Register/registerCoach';
-import registerUser from './Components/Register/registerUser';
+import RegisterCoach from './Components/Register/RegisterCoach';
 
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<StartingPage />}>
-          <Route index element={<StartingPage />} />
-          <Route path='user_profile' element={<UserProfile />} />
+        <Route path='/' element={<StartingPage />} />
+        <Route index element={<StartingPage />} />
+        <Route exact path='user_profile' element={<UserProfile />} />
 
-          <Route path='coachLoggingIn' element={<coachLogin />} />
-          <Route path='userLoggingIn' element={<userLogin />} />
-          <Route path='registerCoach' element={<registerCoach />} />
-          <Route path='registerUser' element={<registerUser />} />
-        </Route>
+        <Route path='registerCoach' element={<RegisterCoach />} />
+
       </Routes>
     </BrowserRouter>
   );

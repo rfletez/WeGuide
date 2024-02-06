@@ -1,6 +1,6 @@
 import '../Styles/startingPageStyle.css';
 import Footer from './Footer';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 function StartingPage() {
     const navigate = useNavigate();
@@ -25,24 +25,24 @@ function StartingPage() {
                     textAlign: 'center',
                     marginBottom: '30px'
                 }}>
-                    <button
+                    <Link
+                        to="/coachLoggingIn"
                         className='btn btn-secondary'
                         style={{ marginRight: '15px' }}
-                        onClick={() => { navigate('/coachLoggingIn') }}>Login as Coach
-                    </button>
+                    >Login as Coach</Link>
 
-                    <button
+                    <Link
+                        to="/registerCoach"
                         className='btn btn-info'
-                        onClick={() => navigate('registerCoach')}>Register as Coach
-                    </button>
+                    >Register as Coach</Link>
                 </div>
 
                 <div className='' style={{ textAlign: 'center' }}>
                     <button
                         className='btn btn-secondary'
                         style={{ marginRight: '15px' }}
-                        onClick={() => navigate('userLoggingIn')}>Login as User
-                    </button>
+                        onClick={() => navigate('userLoggingIn')}
+                    >Login as User</button>
 
                     <button
                         className='btn btn-info'

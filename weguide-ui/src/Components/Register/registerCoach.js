@@ -1,4 +1,8 @@
-function registerCoach() {
-
+function RegisterCoach() {
+    return (
+        <div>
+            Hello from RegisterCoach!
+        </div>
+    );
 }
-export default registerCoach;
+export default RegisterCoach;
